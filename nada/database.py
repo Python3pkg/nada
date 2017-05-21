@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import json
-from singleton import Singleton
+from .singleton import Singleton
 from .common import *
 
 

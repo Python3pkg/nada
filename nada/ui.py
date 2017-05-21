@@ -59,21 +59,21 @@ class UI:
             self.screen.addstr(8, 5, 'Nothing ...')
         else:
             if view == 'menu':
-                for i in xrange(offset, min(len(model), offset + step)):
+                for i in range(offset, min(len(model), offset + step)):
                     if i == index:
                         self.screen.addstr(i - offset + 8, 2, '-> ' + model[i], curses.color_pair(2))
                     else:
                         self.screen.addstr(i - offset + 8, 5, model[i])
 
             elif view == 'list':
-                for i in xrange(offset, min(len(model), offset + step)):
+                for i in range(offset, min(len(model), offset + step)):
                     if i == index:
                         self.screen.addstr(i - offset + 8, 2, '-> ' + model[i], curses.color_pair(2))
                     else:
                         self.screen.addstr(i - offset + 8, 5, model[i])
 
             elif view == 'vols':
-                for i in xrange(offset, min(len(model), offset + step)):
+                for i in range(offset, min(len(model), offset + step)):
                     if i == index:
                         self.screen.addstr(i - offset + 8, 2, '-> ' + model[i]["name"], curses.color_pair(2))
                     else:
@@ -82,7 +82,7 @@ class UI:
             elif view == 'songs':
                 vol_id = model['id']
                 songs = model['songs']
-                for i in xrange(offset, min(len(songs), offset + step)):
+                for i in range(offset, min(len(songs), offset + step)):
                     if i == index and i == play_id and play_vol == vol_id:
                         self.screen.addstr(i - offset + 8, 2, '>> ' + str(i) + '. ' + songs[i]['name'] + ' - ' + songs[i]['artist'],
                                            curses.color_pair(2))

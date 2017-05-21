@@ -6,7 +6,7 @@ import subprocess
 import threading
 import time
 
-from ui import UI
+from .ui import UI
 from .common import *
 
 

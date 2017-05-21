@@ -20,7 +20,7 @@ class Luoo:
 
     def vols(self, vtype=''):
         vols = []
-        for page in xrange(1, 10):
+        for page in range(1, 10):
             url = self.url + '/tag/' + vtype + '?p=' + str(page)
             soup = self.parser(url)
 

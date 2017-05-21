@@ -11,11 +11,11 @@ import locale
 import sys
 import time
 
-from ui import UI
-from player import Player
-from api import Luoo
-from database import Database
-from downloader import Downloader
+from .ui import UI
+from .player import Player
+from .api import Luoo
+from .database import Database
+from .downloader import Downloader
 from .common import *
 
 locale.setlocale(locale.LC_ALL, "")
@@ -246,7 +246,7 @@ class Menu:
                 self.title += ' > 搜索期刊 > Vol.' + self.model['id'] + ' ' + self.model['title']
                 self.view = 'songs'
                 self.ctrl = 'songs'
-            except Exception, e:
+            except Exception as e:
                 self.model = []
 
         elif idx == 3:

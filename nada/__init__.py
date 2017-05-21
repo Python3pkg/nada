@@ -5,7 +5,7 @@
 Nada
 """
 
-from menu import Menu
+from .menu import Menu
 
 
 def start():

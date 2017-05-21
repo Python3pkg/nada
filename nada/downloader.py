@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 
 import os
-import urllib
+import urllib.request, urllib.parse, urllib.error
 import threading
 
-from ui import UI
+from .ui import UI
 from .common import *
 
 
@@ -24,7 +24,7 @@ class Downloader:
             self.ui.status(filename, 'Downloading')
             if not os.path.exists(path):
                 def download_thread(url, path):
-                    urllib.urlretrieve(url , path)
+                    urllib.request.urlretrieve(url , path)
                     self.ui.status(filename, 'Finish Download', 5)
                 thread = threading.Thread(target=download_thread, args=(url, path))
                 thread.start()
